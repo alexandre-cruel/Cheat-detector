@@ -1,6 +1,3 @@
-
-#get les deux fichiers à comparer
-
 file = open('foo.txt', 'r')
 n = 0
 for line in file:
