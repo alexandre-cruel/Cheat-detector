@@ -1,11 +1,13 @@
-file = open('foo.txt', 'r')
-second = open('stud2.txt', 'r')
+
+# -------------- compte le nombre de lignes -------------- #
+ligne = open('foo.txt', 'r')
+ligne_deux = open('stud2.txt', 'r')
 
 n = 0
 m = 0
-for line in file:
+for line in ligne:
     n += 1
-for line in second:
+for line in ligne_deux:
     m += 1
 
 if m == n:
@@ -13,19 +15,10 @@ if m == n:
 else:
     print("Les deux fichiers n'ont pas le même nombre de lignes")
 
-str_file = str(file)
-str_second = str(second)
+# -------------- compte le nombre de mots -------------- #
 
-count1 = 0
-count2 = 0
-for word in str_file:
-    count1 += 1
-for word in str_second:
-    count1 += 1
-diff = count2 - count1
-print("Les fichiers ont", diff, "mots de différence.")
-
-
-packed_file = str_file.replace(' ', '')
-packed_second = str_second.replace(' ', '')
+with open('foo.txt', 'r') as file:
+    data = file.read()
+with open('stud2.txt', 'r') as file:
+    data2 = file.read()
 
