@@ -22,3 +22,7 @@ with open('foo.txt', 'r') as file:
 with open('stud2.txt', 'r') as file:
     data2 = file.read()
 
+print("Les fichiers comprennent respectivement {} et {} mots".format(len(data.split()), len(data2.split())))
+
+# -------------- Comparaison -------------- #
+
